@@ -1,24 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import JobCategory from '../JobCategory/JobCategory';
 import Featured from '../Featured/Featured';
 import JobDetails from '../JobDetails/JobDetails';
 
 const Home = () => {
-    let [jobCategorys, setJobCategory] = useState([]);
-    useEffect( () => {
-        fetch("category.json")
-        .then(response => response.json())
-        .then(data => setJobCategory(data))
-      },[]);
-
-
-      const [jobData, setJobData]= useState({});
-      useEffect( () => {
-        fetch("category.json")
-        .then(response => response.json())
-        .then(data => setJobData(data))
-      },[]);
-
     return (
         <div className="">
             <div className='grid grid-cols-2'>
@@ -36,10 +21,7 @@ const Home = () => {
                 </div>
                 <div className='grid grid-cols-4 gap-5'>
                     {
-                        jobCategorys.map(jobCategory => <JobCategory
-                             jobCategory={jobCategory}
-                             key={jobCategory.id}
-                             ></JobCategory>)
+                        <JobCategory></JobCategory>
                     }
                 </div>
             </div>
