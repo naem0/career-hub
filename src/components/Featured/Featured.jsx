@@ -1,21 +1,22 @@
 import React from 'react';
 
-const Featured = () => {
+const Featured = ({jobData}) => {
+    const {CompanyLogo, JobTitle, CompanyName, Salary, CompanyLocation}= jobData
     return (
         <div className='border-2 p-8 rounded-lg'>
-            <img src="" alt="" />
+            <img src={CompanyLogo} alt="" />
             <div className="">
-                <h4 className='text-xl font-semibold'>Technical Database Engineer</h4>
-                <p className='mt-2 text-slate-400'>google</p>
+                <h4 className='text-xl font-semibold'>{JobTitle}</h4>
+                <p className='mt-2 text-slate-400'>{CompanyName}</p>
                 <div className='flex gap-4 pt-2'>
                     <p className='my-2 border border-indigo-500 text-indigo-500 rounded-md px-4 py-1'>Remote</p>
                     <p className='my-2 border border-indigo-500 text-indigo-500 rounded-md px-4 py-1'>full time</p>
                 </div>
                 <div className='flex gap-4 mt-2 text-slate-400'>
-                    <p className=''>Dhaka, Bangladesh</p>
-                    <p>Salary : 100K - 150K</p>
+                    <p className=''>{CompanyLocation}</p>
+                    <p>Salary : {Salary}</p>
                 </div>
-                <button className='py-3 px-4 rounded-lg text-white bg-gradient-to-r from-sky-500 to-indigo-500 font-semibold mt-4'>See All Jobs</button>
+                <button className='py-3 px-4 rounded-lg text-white bg-gradient-to-r from-sky-500 to-indigo-500 font-semibold mt-4'>View Details</button>
             </div>
         </div>
     );

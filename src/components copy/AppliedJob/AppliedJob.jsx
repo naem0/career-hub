@@ -1,6 +1,8 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const AppliedJob = () => {
+    const appliedJob = useLoaderData()
     return (
         <div>
             <div className='border-2 p-8 rounded-lg flex justify-between gap-10 items-center'>

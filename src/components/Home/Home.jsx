@@ -5,19 +5,19 @@ import JobDetails from '../JobDetails/JobDetails';
 
 const Home = () => {
     let [jobCategorys, setJobCategory] = useState([]);
-    useEffect( () => {
+    useEffect(() => {
         fetch("category.json")
-        .then(response => response.json())
-        .then(data => setJobCategory(data))
-      },[]);
+            .then(response => response.json())
+            .then(data => setJobCategory(data))
+    }, []);
 
 
-      const [jobData, setJobData]= useState({});
-      useEffect( () => {
-        fetch("category.json")
-        .then(response => response.json())
-        .then(data => setJobData(data))
-      },[]);
+    const [jobDatas, setJobData] = useState([]);
+    useEffect(() => {
+        fetch("jobData.json")
+            .then(response => response.json())
+            .then(data => setJobData(data))
+    }, []);
 
     return (
         <div className="">
@@ -37,9 +37,9 @@ const Home = () => {
                 <div className='grid grid-cols-4 gap-5'>
                     {
                         jobCategorys.map(jobCategory => <JobCategory
-                             jobCategory={jobCategory}
-                             key={jobCategory.id}
-                             ></JobCategory>)
+                            jobCategory={jobCategory}
+                            key={jobCategory.id}
+                        ></JobCategory>)
                     }
                 </div>
             </div>
@@ -49,7 +49,12 @@ const Home = () => {
                     <p className='my-4 text-slate-400'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 </div>
                 <div className="grid grid-cols-2 gap-8">
-                    <Featured></Featured>
+                    {
+                        jobDatas.map(jobData => <Featured
+                            jobData={jobData}
+                            key={jobData.ID}
+                        ></Featured>)
+                    }
                 </div>
                 <div className='text-center'>
                     <button className='py-4 px-6 rounded-lg text-white bg-gradient-to-r from-sky-500 to-indigo-500 font-semibold my-6'>See All Jobs</button>
