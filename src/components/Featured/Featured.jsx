@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Featured = ({jobData}) => {
-    const {CompanyLogo, JobTitle, CompanyName, Salary, CompanyLocation}= jobData
+    const navigate= useNavigate()
+    const {CompanyLogo, JobTitle, CompanyName, Salary, CompanyLocation, ID}= jobData
     return (
         <div className='border-2 p-8 rounded-lg'>
             <img src={CompanyLogo} alt="" />
@@ -16,7 +18,7 @@ const Featured = ({jobData}) => {
                     <p className=''>{CompanyLocation}</p>
                     <p>Salary : {Salary}</p>
                 </div>
-                <button className='py-3 px-4 rounded-lg text-white bg-gradient-to-r from-sky-500 to-indigo-500 font-semibold mt-4'>View Details</button>
+                <button onClick={()=>navigate(`job-details/${ID}`)} className='py-3 px-4 rounded-lg text-white bg-gradient-to-r from-sky-500 to-indigo-500 font-semibold mt-4'>View Details</button>
             </div>
         </div>
     );
