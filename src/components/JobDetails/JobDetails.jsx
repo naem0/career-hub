@@ -24,7 +24,7 @@ const JobDetails = () => {
         if (previousAppliedJob) {
             const isBlogAppliedJob = previousAppliedJob.find(bl => bl.id == id);
             if (isBlogAppliedJob) {
-                alert("aca")
+                alert("Already applied")
             }
             else{
                 applidJob = [...previousAppliedJob, setBlogAppliedJob];

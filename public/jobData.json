@@ -11,6 +11,8 @@
     "EducationRequirements": "Bachelor's degree in Computer Science or related field.",
     "JobExperience": "3+ years of experience in software engineering.",
     "email": "jobs@acme.com",
+    "remote": "remote",
+    "job_time": "full-time",
     "phone": "+1 (555) 123-4567"
   },
   {
@@ -25,6 +27,8 @@
     "EducationRequirements": "Bachelor's degree in Marketing or related field.",
     "JobExperience": "5+ years of experience in marketing.",
     "email": "jobs@xyzcorp.com",
+    "remote": "remote",
+    "job_time": "full-time",
     "phone": "+1 (555) 234-5678"
   },
   {
@@ -39,6 +43,8 @@
     "EducationRequirements": "Bachelor's degree in Graphic Design or related field.",
     "JobExperience": "2+ years of experience in graphic design.",
     "email": "jobs@abcagency.com",
+    "remote": "remote",
+    "job_time": "full-time",
     "phone": "+1 (555) 345-6789"
   },
   {
@@ -53,6 +59,8 @@
     "EducationRequirements": "Bachelor's degree in Finance or related field.",
     "JobExperience": "3+ years of experience in financial analysis.",
     "email": "jobs@123inc.com",
+    "remote": "remote",
+    "job_time": "full-time",
     "phone": "+1 (555) 456-7890"
   },
   {
@@ -67,6 +75,8 @@
     "EducationRequirements": "Bachelor's degree in Business Administration or related field.",
     "JobExperience": "1+ years of experience in sales.",
     "email": "jobs@bestproductsco.com",
+    "remote": "remote",
+    "job_time": "full-time",
     "phone": "+1 (555) 567-8901"
   },
   {
@@ -81,6 +91,8 @@
     "EducationRequirements": "Bachelor's degree in Human Resources or related field.",
     "JobExperience": "5+ years of experience in HR management.",
     "email": "jobs@globalcorp.com",
+    "remote": "remote",
+    "job_time": "full-time",
     "phone": "+44 20 1234 5678"
   }
 ]

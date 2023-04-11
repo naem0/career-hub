@@ -14,23 +14,23 @@ const Statistics = () => {
           },
           {
             AssigmentNumerNo: 'Assigment No: 3',
-            AssigmentNumber: 60
+            AssigmentNumber: 59
           },
           {
             AssigmentNumerNo: 'Assigment No: 4',
-            AssigmentNumber: 53
+            AssigmentNumber: 60
           },
           {
             AssigmentNumerNo: 'Assigment No: 5',
-            AssigmentNumber: 60
+            AssigmentNumber: 58
           },
           {
             AssigmentNumerNo: 'Assigment No: 6',
-            AssigmentNumber: 26
+            AssigmentNumber: 53
           },
           {
             AssigmentNumerNo: 'Assigment No: 7',
-            AssigmentNumber: 60
+            AssigmentNumber: 30
           },
           {
             AssigmentNumerNo: 'Assigment No: 8',
