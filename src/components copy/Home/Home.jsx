@@ -1,7 +1,6 @@
 import React from 'react';
 import JobCategory from '../JobCategory/JobCategory';
 import Featured from '../Featured/Featured';
-import JobDetails from '../JobDetails/JobDetails';
 
 const Home = () => {
     return (

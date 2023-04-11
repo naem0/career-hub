@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import JobCategory from '../JobCategory/JobCategory';
 import Featured from '../Featured/Featured';
 import JobDetails from '../JobDetails/JobDetails';
+import logo from '../../assets/img/profil.png'
 
 const Home = () => {
     let [jobCategorys, setJobCategory] = useState([]);
@@ -18,7 +19,7 @@ const Home = () => {
             .then(response => response.json())
             .then(data => setJobData(data))
     }, []);
-
+    
     return (
         <div className="">
             <div className='grid grid-cols-2'>
@@ -27,7 +28,7 @@ const Home = () => {
                     <p className='my-4 text-slate-400'>Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
                     <button className='py-4 px-6 rounded-lg text-white bg-gradient-to-r from-sky-500 to-indigo-500 font-semibold'>Get Started</button>
                 </div>
-                <img src="../../assets/img/profil.png" alt="" />
+                <img className='w-9/12' src={logo} alt="" />
             </div>
             <div className='my-12'>
                 <div className='text-center my-8'>
