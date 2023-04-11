@@ -1,29 +1,72 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 const JobDetails = () => {
+    const jobs = useLoaderData();
+    const dynamic = useParams();
+    const dynamicId = dynamic.id;
+
+    const [jobDetals, setJobDetals] = useState({})
+
+    useEffect(() => {
+        const addedJob = jobs.find(jd => jd.ID == dynamicId);
+        setJobDetals(addedJob);
+
+    }, []);
+
+    // applidJob hendle 
+    const [applidJob, setAppliedJob] = useState(0);
+    const hendleAppliedJob = (id) => {
+        const previousAppliedJob = JSON.parse(localStorage.getItem("applidJob"));
+        let applidJob = [];
+        const setBlogAppliedJob = { id };
+
+        if (previousAppliedJob) {
+            const isBlogAppliedJob = previousAppliedJob.find(bl => bl.id == id);
+            if (isBlogAppliedJob) {
+                alert("aca")
+            }
+            else{
+                applidJob = [...previousAppliedJob, setBlogAppliedJob];
+                setAppliedJob(applidJob);
+                localStorage.setItem("applidJob", JSON.stringify(applidJob));
+            }
+            
+        }
+        else {
+            applidJob.push(setBlogAppliedJob);
+            setAppliedJob(applidJob);
+            localStorage.setItem("applidJob", JSON.stringify(applidJob));
+        }
+        
+    };
+
+    const { JobTitle, CompanyName, Salary, CompanyLocation, ID, JobDescription, EducationRequirements, JobExperience, JobResponsibilities, email, phone, } = jobDetals;
+
     return (
-        <div>
-            <div className="grid grid-cols-3 gap-8">
+        <div className=''>
+
+            <div className="grid grid-cols-3 gap-8 mt-12 ">
                 <div className="col-span-2">
                     <p className='mt-4 text-slate-500'>
-                        <samp className='font-semibold  text-slate-800'>Job Description: </samp> A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.
-
+                        <samp className='font-semibold  text-slate-800'>Job Description: </samp>
+                        {JobDescription}.
                     </p>
                     <p className='mt-4 text-slate-500'>
                         <samp className='font-semibold  text-slate-800'>Job Responsibility: </samp>
-                         A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the user interface.
+                        {JobResponsibilities}
                     </p>
                     <p className='mt-4 font-semibold'>
                         Educational Requirements:
                     </p>
                     <p className='mt-2 text-slate-500'>
-                        A UI/UX (User Interface/User Experience)
+                        {EducationRequirements}
                     </p>
                     <p className='mt-4 font-semibold'>
                         Experiences:
                     </p>
                     <p className='mt-2 text-slate-500'>
-                        This includes designing the layout, visual design, and interactivity of the user interface.
+                        {JobExperience}
                     </p>
                 </div>
                 <div className="">
@@ -31,27 +74,27 @@ const JobDetails = () => {
                         <h5 className='font-semibold mb-4 text-lg'>Job Details</h5>
                         <p className='mt-2 text-slate-500'>
                             <samp className='font-semibold text-slate-800'>Salary : </samp>
-                            A UI/UX frb ya
+                            {Salary}
                         </p>
                         <p className='mt-2 text-slate-500'>
                             <samp className='font-semibold  text-slate-800'>Job Title : </samp>
-                            A UI/UX frb ya
+                            {JobTitle}
                         </p>
                         <h5 className='font-semibold my-4 text-lg'>Contact Information</h5>
                         <p className='mt-2 text-slate-500'>
                             <samp className='font-semibold text-base text-slate-800'>Phone : </samp>
-                            A UI/UX frb ya
+                            {phone}
                         </p>
                         <p className='mt-2 text-slate-500'>
                             <samp className='font-semibold  text-slate-800'>Email : </samp>
-                            A UI/UX frb ya
+                            {email}
                         </p>
                         <p className='mt-2 text-slate-500'>
                             <samp className='font-semibold  text-slate-800'>Address : </samp>
-                            A UI/UX frb ya
+                            {CompanyLocation}
                         </p>
                     </div>
-                    <button className='my-4 py-2 w-full rounded-lg text-white bg-gradient-to-r from-sky-500 to-indigo-500 font-semibold'>Get Started</button>
+                    <button onClick={()=>hendleAppliedJob(ID)} className='my-4 py-2 w-full rounded-lg text-white bg-gradient-to-r from-sky-500 to-indigo-500 font-semibold'>Apply Now</button>
                 </div>
             </div>
         </div>

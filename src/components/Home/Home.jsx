@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import JobCategory from '../JobCategory/JobCategory';
 import Featured from '../Featured/Featured';
-import JobDetails from '../JobDetails/JobDetails';
 import logo from '../../assets/img/profil.png'
 
 const Home = () => {
