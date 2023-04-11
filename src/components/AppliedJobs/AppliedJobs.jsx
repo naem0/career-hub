@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Appliedjob from '../AppliedJob/AppliedJob';
+import Appliedjob from '../AppliedJob/Appliedjob';
 
 
 
