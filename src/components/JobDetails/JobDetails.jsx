@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot, faDollar, faPhone, faEnvelope, faCalendarDays } from '@fortawesome/free-solid-svg-icons'
 
 const JobDetails = () => {
     const jobs = useLoaderData();
@@ -73,24 +75,24 @@ const JobDetails = () => {
                     <div className="bg-zinc-100 p-6 rounded-md">
                         <h5 className='font-semibold mb-4 text-lg'>Job Details</h5>
                         <p className='mt-2 text-slate-500'>
-                            <samp className='font-semibold text-slate-800'>Salary : </samp>
+                            <samp className='font-semibold text-slate-800'><FontAwesomeIcon icon={faDollar} /> Salary : </samp>
                             {Salary}
                         </p>
                         <p className='mt-2 text-slate-500'>
-                            <samp className='font-semibold  text-slate-800'>Job Title : </samp>
+                            <samp className='font-semibold  text-slate-800'><FontAwesomeIcon icon={faCalendarDays} /> Job Title : </samp>
                             {JobTitle}
                         </p>
                         <h5 className='font-semibold my-4 text-lg'>Contact Information</h5>
                         <p className='mt-2 text-slate-500'>
-                            <samp className='font-semibold text-base text-slate-800'>Phone : </samp>
+                            <samp className='font-semibold text-base text-slate-800'><FontAwesomeIcon icon={faPhone} /> Phone : </samp>
                             {phone}
                         </p>
                         <p className='mt-2 text-slate-500'>
-                            <samp className='font-semibold  text-slate-800'>Email : </samp>
+                            <samp className='font-semibold  text-slate-800'><FontAwesomeIcon icon={faEnvelope} /> Email : </samp>
                             {email}
                         </p>
                         <p className='mt-2 text-slate-500'>
-                            <samp className='font-semibold  text-slate-800'>Address : </samp>
+                            <samp className='font-semibold  text-slate-800'><FontAwesomeIcon icon={faLocationDot} /> Address : </samp>
                             {CompanyLocation}
                         </p>
                     </div>

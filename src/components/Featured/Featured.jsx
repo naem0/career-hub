@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot, faDollar } from '@fortawesome/free-solid-svg-icons'
 
 const Featured = ({jobData}) => {
     const navigate= useNavigate()
@@ -15,8 +17,8 @@ const Featured = ({jobData}) => {
                     <p className='my-2 border border-indigo-500 text-indigo-500 rounded-md px-4 py-1'>{job_time}</p>
                 </div>
                 <div className='flex gap-4 mt-2 text-slate-400'>
-                    <p className=''>{CompanyLocation}</p>
-                    <p>Salary : {Salary}</p>
+                    <p className=''><FontAwesomeIcon icon={faLocationDot} /> {CompanyLocation}</p>
+                    <p><FontAwesomeIcon icon={faDollar} /> Salary : {Salary}</p>
                 </div>
                 <button onClick={()=>navigate(`job-details/${ID}`)} className='py-3 px-4 rounded-lg text-white bg-gradient-to-r from-sky-500 to-indigo-500 font-semibold mt-4'>View Details</button>
             </div>

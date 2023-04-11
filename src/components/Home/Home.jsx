@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import JobCategory from '../JobCategory/JobCategory';
 import Featured from '../Featured/Featured';
 import logo from '../../assets/img/profil.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => {
     let [jobCategorys, setJobCategory] = useState([]);
@@ -18,7 +20,7 @@ const Home = () => {
             .then(response => response.json())
             .then(data => setJobData(data))
     }, []);
-    
+
     return (
         <div className="">
             <div className='grid grid-cols-2'>
