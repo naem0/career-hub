@@ -27,7 +27,7 @@
     "EducationRequirements": "Bachelor's degree in Marketing or related field.",
     "JobExperience": "5+ years of experience in marketing.",
     "email": "jobs@xyzcorp.com",
-    "remote": "remote",
+    "remote": "onsite",
     "job_time": "full-time",
     "phone": "+1 (555) 234-5678"
   },
@@ -43,7 +43,7 @@
     "EducationRequirements": "Bachelor's degree in Graphic Design or related field.",
     "JobExperience": "2+ years of experience in graphic design.",
     "email": "jobs@abcagency.com",
-    "remote": "remote",
+    "remote": "onsite",
     "job_time": "full-time",
     "phone": "+1 (555) 345-6789"
   },
@@ -75,7 +75,7 @@
     "EducationRequirements": "Bachelor's degree in Business Administration or related field.",
     "JobExperience": "1+ years of experience in sales.",
     "email": "jobs@bestproductsco.com",
-    "remote": "remote",
+    "remote": "onsite",
     "job_time": "full-time",
     "phone": "+1 (555) 567-8901"
   },

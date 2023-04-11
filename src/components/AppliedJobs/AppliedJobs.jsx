@@ -10,18 +10,31 @@ const AppliedJobs = () => {
 
     //  AppliedJob data lode from localStorage 
     const [applidJobs, setAppliedJob] = useState([]);
+    const [filterJobs, setfilterJob] = useState([]);
     const jobs = useLoaderData();
+
     useEffect(()=>{
         const getAppliedJobData= JSON.parse(localStorage.getItem("applidJob"));
-
-        let savedJob = [];
         
+        let savedJob = [];
         for (let id of getAppliedJobData) {
             let addedJob = jobs.find(job => job.ID == id.id);
-            savedJob= [...savedJob, addedJob]
+            savedJob= [...savedJob, addedJob];
         }
+        
+        setfilterJob(savedJob)
         setAppliedJob(savedJob);
     },[]);
+
+
+    const filerJob = (remote)=>{
+        
+        if (remote) {
+            const filtaredJob = filterJobs.filter(jb => jb.remote == remote );
+            setAppliedJob(filtaredJob);
+        }
+    }
+    
 
     return (
         <div>
@@ -30,8 +43,13 @@ const AppliedJobs = () => {
                 <h1 className='text-4xl mt-16 font-semibold'>Applied Jobs</h1>
                 <img className='-mt-24  h-full'src={logo1} alt="" />
             </div>
-            <h3>amar</h3>
-            <div className="">
+            <div className='float-right gap-10 overflow-hidden mt-8'>
+            <button onClick={()=> filerJob('remote')} className='me-10 py-3 px-4 rounded-lg text-white bg-gradient-to-r from-sky-500 to-indigo-500 font-semibold mt-4'>Remote Job</button>
+            <button onClick={()=> filerJob('onsite')} className=' me-10 py-3 px-4 rounded-lg text-white bg-gradient-to-r from-sky-500 to-indigo-500 font-semibold mt-4'>Onsite Job</button>
+                
+            </div>
+            
+            <div className="mt-36">
                 {
                    applidJobs.map(applidJob=> <Appliedjob
                    key={applidJob.ID}

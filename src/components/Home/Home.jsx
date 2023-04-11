@@ -23,7 +23,7 @@ const Home = () => {
 
     return (
         <div className="">
-            <div className='grid grid-cols-2'>
+            <div className='grid grid-cols-1 md:grid-cols-2'>
                 <div className="">
                     <h1 className='text-6xl font-semibold'>One Step <br /> Closer To Your <br /> <samp className='text-indigo-500'>Dream Job</samp></h1>
                     <p className='my-4 text-slate-400'>Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
@@ -36,7 +36,7 @@ const Home = () => {
                     <h3 className='text-4xl font-semibold'>Job Category List</h3>
                     <p className='my-4 text-slate-400'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 </div>
-                <div className='grid grid-cols-4 gap-5'>
+                <div className='grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5'>
                     {
                         jobCategorys.map(jobCategory => <JobCategory
                             jobCategory={jobCategory}
@@ -50,7 +50,7 @@ const Home = () => {
                     <h3 className='text-4xl font-semibold'>Featured Jobs</h3>
                     <p className='my-4 text-slate-400'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 </div>
-                <div className="grid grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {
                         jobDatas.map(jobData => <Featured
                             jobData={jobData}
