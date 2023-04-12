@@ -10,9 +10,9 @@ const Appliedjob = ({ applidJob }) => {
     return (
         <div>
             
-            <div className='border-2 p-8 rounded-lg flex justify-between gap-10 items-center mt-6'>
-                <div className="flex gap-8">
-                    <div className="w-80  bg-slate-200 flex justify-center items-center rounded-md">
+            <div className='border-2 p-8 rounded-lg md:flex justify-between gap-10 items-center mt-6'>
+                <div className="md:flex gap-8">
+                    <div className="md:w-80  bg-slate-200 flex justify-center items-center rounded-md">
                         <img className='w-40 h-15' src={CompanyLogo} alt="" />
                     </div>
                     <div className="">

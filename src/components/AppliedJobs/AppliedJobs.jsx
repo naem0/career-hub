@@ -38,10 +38,10 @@ const AppliedJobs = () => {
 
     return (
         <div>
-            <div className='flex justify-between top-8'>
+            <div className='md:flex justify-between top-8'>
                 <img className='-mt-12  h-full' src={logo} alt="" />
                 <h1 className='text-4xl mt-16 font-semibold'>Applied Jobs</h1>
-                <img className='-mt-24  h-full'src={logo1} alt="" />
+                <img className='-mt-28  h-full'src={logo1} alt="" />
             </div>
             <div className='float-right gap-10 overflow-hidden mt-8'>
             <button onClick={()=> filerJob('remote')} className='me-10 py-3 px-4 rounded-lg text-white bg-gradient-to-r from-sky-500 to-indigo-500 font-semibold mt-4'>Remote Job</button>

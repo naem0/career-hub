@@ -47,12 +47,12 @@ const JobDetails = () => {
 
     return (
         <div className=''>
-            <div className='flex justify-between top-8'>
+            <div className=' md:flex justify-between top-8'>
                 <img className='-mt-12 h-full' src={logo} alt="" />
                 <h1 className='text-4xl mt-16 font-semibold'>Job Details</h1>
-                <img className='-mt-24 h-full'src={logo1} alt="" />
+                <img className='-mt-28 h-full'src={logo1} alt="" />
             </div>
-            <div className="grid grid-cols-3 gap-8 mt-12 ">
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-8 mt-12 ">
                 <div className="col-span-2">
                     <p className='mt-4 text-slate-500'>
                         <samp className='font-semibold  text-slate-800'>Job Description: </samp>
