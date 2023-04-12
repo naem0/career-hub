@@ -30,7 +30,7 @@ const Statistics = () => {
     },
     {
       AssigmentNumerNo: 'Assigment No: 7',
-      AssigmentNumber: 30
+      AssigmentNumber: 60
     },
     {
       AssigmentNumerNo: 'Assigment No: 8',

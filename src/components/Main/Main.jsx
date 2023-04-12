@@ -6,7 +6,10 @@ const Main = () => {
     return (
         <div className='md:container md:mx-auto'>
             <Header></Header>
-            <Outlet></Outlet>
+            <div className=" mt-10">
+                <Outlet></Outlet>
+            </div>
+            
         </div>
     );
 };
