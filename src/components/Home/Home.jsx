@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import JobCategory from '../JobCategory/JobCategory';
 import Featured from '../Featured/Featured';
 import logo from '../../assets/img/profil.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
     let [jobCategorys, setJobCategory] = useState([]);
@@ -14,12 +13,15 @@ const Home = () => {
     }, []);
 
 
+    const jobs = useLoaderData();
     const [jobDatas, setJobData] = useState([]);
+    
     useEffect(() => {
-        fetch("jobData.json")
-            .then(response => response.json())
-            .then(data => setJobData(data))
+        setJobData(jobs.slice(0,4))
     }, []);
+    const hendalSeeAllJobs= () =>{
+        setJobData(jobs);
+    }
 
     return (
         <div className="">
@@ -59,7 +61,7 @@ const Home = () => {
                     }
                 </div>
                 <div className='text-center'>
-                    <button className='py-4 px-6 rounded-lg text-white bg-gradient-to-r from-sky-500 to-indigo-500 font-semibold my-6'>See All Jobs</button>
+                    <button onClick={()=> hendalSeeAllJobs()} className='py-4 px-6 rounded-lg text-white bg-gradient-to-r from-sky-500 to-indigo-500 font-semibold my-6'>See All Jobs</button>
                 </div>
             </div>
         </div>

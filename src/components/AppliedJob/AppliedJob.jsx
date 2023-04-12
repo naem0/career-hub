@@ -6,7 +6,7 @@ import { faLocationDot, faDollar } from '@fortawesome/free-solid-svg-icons'
 
 const Appliedjob = ({ applidJob }) => {
     const navigate= useNavigate();
-    const { CompanyLogo, JobTitle, CompanyName, Salary, CompanyLocation, ID, remote, job_time } = applidJob
+    const { CompanyLogo, JobTitle, CompanyName, Salary, CompanyLocation, ID, remote, job_time } = applidJob;
     return (
         <div>
             

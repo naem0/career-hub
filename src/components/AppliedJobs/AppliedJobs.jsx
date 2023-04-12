@@ -51,10 +51,9 @@ const AppliedJobs = () => {
             
             <div className="mt-36">
                 {
-                   applidJobs.map(applidJob=> <Appliedjob
+                   applidJobs?.map(applidJob=> <Appliedjob
                    key={applidJob.ID}
                    applidJob={applidJob}
-
                    ></Appliedjob>) 
                 }
             </div>

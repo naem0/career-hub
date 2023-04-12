@@ -35,14 +35,12 @@ const JobDetails = () => {
                 setAppliedJob(applidJob);
                 localStorage.setItem("applidJob", JSON.stringify(applidJob));
             }
-            
         }
         else {
             applidJob.push(setBlogAppliedJob);
             setAppliedJob(applidJob);
             localStorage.setItem("applidJob", JSON.stringify(applidJob));
         }
-        
     };
 
     const { JobTitle, CompanyName, Salary, CompanyLocation, ID, JobDescription, EducationRequirements, JobExperience, JobResponsibilities, email, phone, } = jobDetals;
